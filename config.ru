@@ -43,8 +43,8 @@ end
 ##ADD A NEW USER
 post "/" do
   protected!
-  param :name, String, required: true
-  param :email, String, required: true, format: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
+  #param :name, String, required: true
+  #param :email, String, required: true, format: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
 
   contents = File.open("./test-users.json").read
   parsed_contents = JSON.parse(contents)

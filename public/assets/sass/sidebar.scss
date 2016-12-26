@@ -1,0 +1,29 @@
+// Sidebar Left
+main {
+	.sidebar-left {
+		border:1px solid #ccc;
+	  	background-color: white;
+	  	form {
+			margin-bottom:20px;
+			padding:10px;
+			input {
+				width:100%;
+			  	padding-left: 10px;
+			  	margin-bottom: 15px;
+			}
+		}
+	  	.input-header {
+		  	padding-left: 10px;
+		}
+	  	.user-entry {
+		  	height: 40px;
+		}
+	  	.add-entry-btn {
+		  	width: 50%;
+		  	white-space: normal;
+		  	background-color: #5cb85c;
+		}
+	}
+}
+
+

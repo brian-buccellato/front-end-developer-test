@@ -6,42 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Teachable Test</title>
     <link href="assets/css/style.css" rel="stylesheet">
-
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
     <![endif]-->
   </head>
   <body>
     <header>
-	    <h1>Teachable Test</h1>
+	    <h1>Teachable Events</h1>
     </header>
-    <main>
+    <main ng-app="eventManager" ng-controller="eventController">
 	    <div class="container">
-	    	<div class="row">
+
+          <div class="row">
+              <div class="col-xs-12 col-sm-12">
+                    <div ng-show="personAdded" class="alert alert-success success-added" role="alert">{{added}}</div>
+                    <div ng-show="removed" class="alert alert-danger success-removed" role="alert">{{removedName}}</div>
+              </div>
+          </div>
+          <div class="row">
 	    		<div class="sidebar-left col-xs-12 col-sm-4">
-		    		
-	    			<form>
-						  <input type="text" name="username" value="username">
-						  <input type="text" name="email" value="email">
-						  <input type="submit" value="Submit">
-						</form>
-	    				
+	    			<h3 class="input-header">Add an Attendee</h3>
+                    <form>
+						  <input class="user-entry" ng-model="enteredName" type="text" name="username" value="username" placeholder="username">
+						  <input class="user-entry" ng-model="enteredEmail" type="text" name="email" value="email" placeholder="email">
+						  <input ng-click="addAttendee($event)" class="btn btn-success add-entry-btn" type="submit" value="ADD ATTENDEE">
+                    </form>
     			</div>
-	    		<div class="main-content col-xs-12 col-sm-8">
-	    			<div class="registrants">
-		    			{registrants}
-	    			</div>
+                <div class="col-sm-1"></div>
+	    		<div class="main-content col-xs-12 col-sm-7">
+                    <h3>Attendee List</h3>
+                    <div class="registrant-list" dnd-list="registrants">
+                        <div ng-show="empty == false"
+                            ng-repeat="person in registrants"
+                            dnd-draggable="person"
+                            dnd-moved="registrants.splice($index, 1)"
+                            dnd-effect-allowed="move"
+                            class="registrants">
+                            <div id="{{person.email}}" class="registered-name">
+                              <span class="glyphicon glyphicon-menu-hamburger"></span>
+                              {{person.name}} ({{person.email}})
+                              <span ng-click="removeAttendee($event)" class="glyphicon glyphicon-remove remove-entry pull-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-show="empty == true">
+                        <div class="no-registrants">There are no registrants</div>
+                    </div>
 	    		</div>
 	    	</div>
 	    </div>
     </main>
     <footer>
-	    
     </footer>
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="app.js">
+
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js"></script>
   </body>
 </html>

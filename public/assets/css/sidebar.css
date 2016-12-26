@@ -1,0 +1,20 @@
+main .sidebar-left {
+  border: 1px solid #ccc;
+  background-color: white; }
+  main .sidebar-left form {
+    margin-bottom: 20px;
+    padding: 10px; }
+    main .sidebar-left form input {
+      width: 100%;
+      padding-left: 10px;
+      margin-bottom: 15px; }
+  main .sidebar-left .input-header {
+    padding-left: 10px; }
+  main .sidebar-left .user-entry {
+    height: 40px; }
+  main .sidebar-left .add-entry-btn {
+    width: 50%;
+    white-space: normal;
+    background-color: #5cb85c; }
+
+/*# sourceMappingURL=sidebar.css.map */

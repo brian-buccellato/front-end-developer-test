@@ -1,16 +1,20 @@
 {
   "guests": [
     {
-      "name": "Cain Marko",
-      "email": "cmarko@xmen.com"
+      "email": "marcy@marcy.com",
+      "name": "Marcy Buccellato"
     },
     {
-      "name": "Rudy Littlegye",
-      "email": "rudy@notredame.edu"
+      "email": "guy@donkeysauce.com",
+      "name": "Guy Fieri"
     },
     {
-      "email": "carlie@maybe.com",
-      "name": "Carlie Fiorina"
+      "email": "buttons@cats.com",
+      "name": "Buttons T. Cat"
+    },
+    {
+      "email": "brian@brian.com",
+      "name": "Brian Buccellato"
     }
   ]
 }

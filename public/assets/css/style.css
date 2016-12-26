@@ -5806,40 +5806,72 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-body {
-  font-size: 16px; }
-
 header {
   background: black;
   text-align: center;
   padding: 20px 0; }
+  header h1 {
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px; }
 
-header h1 {
-  padding: 0;
-  margin: 0;
-  color: white;
-  text-transform: uppercase;
-  font-size: 14px; }
+main .sidebar-left {
+  border: 1px solid #ccc;
+  background-color: white; }
+  main .sidebar-left form {
+    margin-bottom: 20px;
+    padding: 10px; }
+    main .sidebar-left form input {
+      width: 100%;
+      padding-left: 10px;
+      margin-bottom: 15px; }
+  main .sidebar-left .input-header {
+    padding-left: 10px; }
+  main .sidebar-left .user-entry {
+    height: 40px; }
+  main .sidebar-left .add-entry-btn {
+    width: 50%;
+    white-space: normal;
+    background-color: #5cb85c; }
 
 main {
+  background-color: #F7F7F7;
   padding: 100px 0; }
+  main .success-added {
+    background-color: #5cb85c;
+    color: white;
+    text-align: center; }
+  main .success-removed {
+    color: white;
+    background-color: #d9534f;
+    text-align: center; }
+  main .main-content {
+    background-color: white;
+    border: 1px solid #ccc; }
+    main .main-content .registrants {
+      background-color: #F7F7F7;
+      color: #737373;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding: 10px; }
+      main .main-content .registrants .registered-name {
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #737373; }
+      main .main-content .registrants .remove-entry {
+        cursor: pointer; }
+    main .main-content .no-registrants {
+      margin: 10px;
+      padding: 20px;
+      border-style: dotted;
+      border-color: #737373;
+      backround-color: #e7e7e7;
+      color: #737373;
+      text-align: center; }
+    main .main-content .registrant-list {
+      list-style: none;
+      margin-left: 0; }
 
-main .sidebar-left form {
-  margin-bottom: 20px;
-  padding: 30px;
-  background: #eaeaea;
-  border: 1px solid #ccc; }
-
-main .sidebar-left form input {
-  width: 100%;
-  margin-bottom: 10px; }
-
-main .sidebar-left .welcome-message {
-  padding: 30px;
-  background: #eaeaea;
-  border: 1px solid #ccc; }
-
-main .main-content .registrants {
-  padding: 30px;
-  background: #eaeaea;
-  border: 1px solid #ccc; }
+/*# sourceMappingURL=style.css.map */
